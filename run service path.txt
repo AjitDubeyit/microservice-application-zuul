@@ -1,0 +1,11 @@
+1. Run Eureka Server
+2. Run Exchange Service 
+3. Run Currency Conversion Service
+4. Run Zuul application
+
+Browser ---> http://localhost:8011/currency-conversion-service/currency-conversion/from/USD/to/INR/qty/100
+
+This will redirect request to zuul gateway, that will send request to Currency Conversion Service ----> To access exchange service ---> fowards request to zuul ----> Zuul sends request to exchange service and  also response intercepts through zuul gateway.
+
+
+   
